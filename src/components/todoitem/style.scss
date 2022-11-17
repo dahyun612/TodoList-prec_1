@@ -1,0 +1,45 @@
+.todo-container{
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+}
+
+.todo-wrapper {
+
+    height: 40%;
+    width: 50%;
+    border: none;
+    font-size: 43px;
+    font-weight: bolder;
+    border-bottom: 3px solid #C73030;
+    margin: auto;
+    padding: 5px;
+    background: #E9B7D4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.deleteBtn{
+    border: none;
+    background: none;
+    margin-right: 1rem;
+    color: #e64980;
+    font-weight: 600;
+    font-size: 43px;
+    cursor: pointer;
+
+}
+
+.successBtn{
+    border: none;
+    background: none;
+    margin-left: 1rem;
+    color:#34B4CA;
+    font-weight: 600;
+    font-size: 35px;
+    cursor: pointer;
+}
