@@ -1,11 +1,19 @@
 import React from "react";
 import TodoItem from "../todoitem/TodoItem";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onRemove, onSuccess }) => {
   return (
     <div>
       {todos.map((todo) => {
-        return <TodoItem text={todo.text} key={todo.id} />;
+        return (
+          <TodoItem
+            todo={todo}
+            // body={todo.body}
+            key={todo.id}
+            onRemove={onRemove}
+            onSuccess={onSuccess}
+          />
+        );
       })}
     </div>
   );

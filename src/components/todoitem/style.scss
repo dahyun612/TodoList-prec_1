@@ -23,6 +23,18 @@
     display: flex;
 
 }
+
+.text {
+    font-size: 20px;
+    color:#e62d2d;
+    text-align: left; 
+&:checked {
+   .texted {
+    color: #22b8cf;
+    text-decoration: line-through;
+   }
+}}
+
 .deleteBtn{
     border: none;
     background: none;
@@ -39,6 +51,16 @@
     background: none;
     margin-left: 1rem;
     color:#34B4CA;
+    font-weight: 600;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.noSuccessBtn {
+    border: none;
+    background: none;
+    margin-left: 1rem;
+    color:#e64980;
     font-weight: 600;
     font-size: 35px;
     cursor: pointer;

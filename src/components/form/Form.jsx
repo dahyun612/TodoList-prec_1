@@ -1,34 +1,29 @@
 import React, { useState } from "react";
+import TodoList from "../todolist/TodoList";
 import "./style.scss";
 
-const Form = (setTodos) => {
+const Form = ({ addTodo }) => {
   const [value, setValue] = useState("");
   const [errorMessage, setErrorMessage] = useState();
 
   function handleFormSubmit(e) {
     e.preventDefault();
-
-    setErrorMessage("");
     if (value === "") {
       setErrorMessage("빈 값은 입력할 수 없습니다");
-      return;
+    } else {
+      setErrorMessage("");
     }
   }
 
-  function handleFormInput(event) {
+  function onChange(event) {
     setValue(event.target.value);
   }
 
   return (
     <div className="form-wrapper">
       <form className="form-container" onSubmit={handleFormSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={value}
-          onChange={handleFormInput}
-        />
-        <button type="submit">💖</button>
+        <input type="text" name="body" value={value} onChange={onChange} />
+        <button onClick={() => addTodo(value)}>💖</button>
       </form>
       <p
         style={{

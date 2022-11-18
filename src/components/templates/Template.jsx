@@ -6,7 +6,6 @@ const Template = () => {
   return (
     <div>
       <img className="logo" src="img/todoLogo.png" />
-      <Form />
     </div>
   );
 };
